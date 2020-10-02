@@ -55,7 +55,7 @@ Currently the UI and much of the functionality of the website is unimplemented o
 
 ### Functionality - Map
 
-* Google Maps API User Agreement 10.1.3.b states that caching latlong data in order to quickly create overlays using the Google Maps API is a clear violation of the terms of service. In order to restore the inteded functionality of the site, a critical refactoring of the data model is needed if users are to be able to create custom events.
+* Google Maps API User Agreement 10.1.3(b) states that caching latlong data in order to quickly create overlays using the Google Maps API is a clear violation of the terms of service. In order to restore the inteded functionality of the site, a critical refactoring of the data model is needed if users are to be able to create custom events.
 * Currently, the map is incapable of rendering markers from the database. As a result, this view is largely incapable of actually rendering any information from the database.
 
 ### Functionality - Profile page
