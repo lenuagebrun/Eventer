@@ -23,8 +23,6 @@ class App extends React.Component {
     this.state = {
       ...this.getIntitalState(),
     }
-
-
   }
 
   //Intializer
@@ -45,25 +43,15 @@ class App extends React.Component {
   //User state definitions
 
   updateUser = (data) => {
-    this.setState({ user: data })
-  }
-
-  handleLogout = () => {
-    userService.logout();
-    this.setState({ user: null });
-  }
-
-
-
-
-
-
-
+      this.setState({ user: data, loggedIn: true })
+    }
+    handleLogout = () => {
+      userService.logout();
+      this.setState({ user: null, loggedIn: false });
+    }
 
   render() {
-    //<Login updateUser={this.updateUser}/>
     console.log(this.state)
-
     return (
       <Router>
        <div>
@@ -71,7 +59,10 @@ class App extends React.Component {
         <br />
         <Route path="/" component={Map} />
         <Route path="/register" component={CreateUser} />
-        <Route path="/login" component={Login} />
+        <Route
+            path="/login"
+            render={() => <Login updateUser={this.updateUser} />}
+          />
         <Route path="/events" component={AllEvents} />
         <Route path="/edit/:id" component={EditEvent} />
         <Route path="/create" component={CreateEvent} />
