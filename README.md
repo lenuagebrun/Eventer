@@ -47,7 +47,7 @@ Upon a succesful login from a 'doctor' account you will be greeted with the foll
 
 Upon a succesful login from a 'patient' account you will be greeted with the following view.
 
-![img]([img]https://i.imgur.com/2Zy1Ee4.png)
+![Imgur Image]([img]https://i.imgur.com/2Zy1Ee4.png)
 
 # Future Enhancements 
 
