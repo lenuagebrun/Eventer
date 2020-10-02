@@ -6,9 +6,6 @@ This is a team project conducted in accordance with the software engineering imm
 
 Eventer is a web-based application that enables users to use the Google Maps API to create custom events at locations. These events would enable other users in the area to join the event and give a responsive layout as to the amount of people intending to go to a specific event. In addition, each event would be tied to a chat room that enabled attendees to be able to communicate and share the experience of the event with one another while simultaneiously enabling event managers to quickly dispatch notices to all attendees.  
 
-# Link to Site
-
-https://gaemr.herokuapp.com/accounts/login/
 
 # Installation
 
