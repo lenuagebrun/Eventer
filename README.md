@@ -41,7 +41,7 @@ Complete a multiple-field form in order to register account. Following a succesf
 
 Upon a succesful login from a 'doctor' account you will be greeted with the following view.
 
-![Imgur Image](https://i.imgur.com/mvxECSb.png)
+![Imgur Image](https://i.imgur.com/xkG113K.png)
 
 ### Map View
 
