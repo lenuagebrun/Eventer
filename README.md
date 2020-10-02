@@ -12,8 +12,6 @@ https://gaemr.herokuapp.com/accounts/login/
 
 # Installation
 
-### For non-Windows users:
-
 ```
 git clone https://github.com/rahulgupta15/generalassemblyemr
 cd eventer
