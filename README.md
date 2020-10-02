@@ -29,7 +29,7 @@ npm start
 
 Create an account in order to gain access to the create event functionality.
 
-![Imgur Image](https://i.imgur.com/8fyC0ny.png)
+[Imgur](https://imgur.com/2Zy1Ee4)
 
 ### Account Registration Portal
 
@@ -41,13 +41,13 @@ Complete a multiple-field form in order to register account. Following a succesf
 
 Upon a succesful login from a 'doctor' account you will be greeted with the following view.
 
-![Imgur Image](https://i.imgur.com/FWneyt8.png)
+![Imgur](https://imgur.com/xkG113K)
 
 ### Map View
 
 Upon a succesful login from a 'patient' account you will be greeted with the following view.
 
-![Imgur Image](https://i.imgur.com/JTMYI9O.png)
+![Imgur](https://imgur.com/XMVncG0)
 
 # Future Enhancements 
 
