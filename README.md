@@ -75,6 +75,23 @@ Currently the UI and much of the functionality of the website is unimplemented o
 * There are no correct transitions betweent he seperate views.
 * Forms are not correctly formated, although semantic-ui is installed.
 
+### Dependencies 
+
+```
+    "@react-google-maps/api": "^1.10.1",
+    "axios": "^0.18.1",
+    "bootstrap": "^4.3.1",
+    "react": "^16.8.6",
+    "react-datepicker": "^2.5.0",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^1.3.1"
+
+```
+
+
 # Credits
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
