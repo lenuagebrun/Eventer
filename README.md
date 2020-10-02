@@ -82,7 +82,7 @@ Currently the UI and much of the functionality of the website is unimplemented o
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><img src="https://avatars0.githubusercontent.com/u/68161992?s=460&u=65092f7ea36ec42362d806f57d9b573326c1516e&v=4" width="100px;" alt=""/><br /><sub><b>Pierre-Alexandre Julien</b></sub></a><br /><a href="https://github.com/rahulgupta15" title="Code">💻</a></td>
+    <td align="center"><img src="https://avatars0.githubusercontent.com/u/68161992?s=460&u=65092f7ea36ec42362d806f57d9b573326c1516e&v=4" width="100px;" alt=""/><br /><sub><b>Pierre-Alexandre Julien</b></sub></a><br /><a href="https://github.com/lenuagebrun">💻</a></td>
     <td align="center"><img src="https://avatars1.githubusercontent.com/u/63525891?s=400&v=4" width="100px;" alt=""/><br /><sub><b>Ahmed Jamal</b></sub></a><br /><a href="https://github.com/AhmedJamal93" title="Code">💻</a></td>
     <td align="center"><img src="https://i.imgur.com/AciEwUR.jpg" width="100px;" alt=""/><br /><sub><b>Noah Eror</b></sub></a><br /><a href="https://github.com/BitterHippo" title="Code">💻</a></td>
   </tr>
