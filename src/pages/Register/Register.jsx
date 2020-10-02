@@ -4,7 +4,8 @@ import {
   Form,
   Input
 } from 'semantic-ui-react';
-import userService from '../../utils/userService'; 
+import userService from '../../utils/userService';
+import axios from 'axios';
 
 class Register extends React.Component {
   constructor () {
@@ -38,6 +39,9 @@ class Register extends React.Component {
     } catch (error) {
       console.error(error)
     }
+
+    axios.post('http://localhost:4000/users')
+
   }
 
   render() {

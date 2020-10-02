@@ -11,6 +11,15 @@ class Header extends Component{
           <li className="navbar-item">
           <Link to="/create" className="nav-link">NEW EVENT</Link>
           </li>
+          <li className="navbar-item">
+          <Link to="/login" className="nav-link">LOGIN</Link>
+          </li>
+          <li className="navbar-item">
+          <Link to="/register" className="nav-link">REGISTER</Link>
+          </li>
+          <li className="navbar-item">
+          <Link to="/events" className="nav-link">EVENTS</Link>
+          </li>
         </ul>
         </div>
       </nav>

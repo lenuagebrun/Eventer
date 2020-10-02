@@ -18,6 +18,24 @@ router.route('/').get((req, res) => {
 });
 
 
+// User Login
+router.route('/login').post(async(req,res) => {
+  try {
+    const user = await Users.findOne({email: req.body.email});
+    if (!user) return res.status(401).json({err: 'bad credentials'});
+    user.comparePassword(req.body.password, (err, isMatch) => {
+      if (isMatch) {
+        const token = createJWT(user);
+        res.json({token});
+      } else {
+        return res.status(401).json({err: 'bad credentials'});
+      }
+    });
+  } catch (err) {
+    return res.status(401).json(err);
+  }
+})
+
 // Add a new User
 router.post('/add', [
   check('username', 'Username is required').not().isEmpty(),
@@ -63,7 +81,7 @@ async (req, res) => {
 
   //JWT payload = MONGODB - ID
   const payload = {
-    users : {
+    user : {
       id: user.id
     }
   }
@@ -87,28 +105,6 @@ async (req, res) => {
     }
   }
 );
-
-
-
-
-//   const username = req.body.username
-//   const firstname = req.body.firstname
-//   const lastname = req.body.lastname
-//   const email = req.body.email
-//   const password = req.body.password
-//   const newUser = new Users({
-//     username,
-//     firstname,
-//     lastname,
-//     email,
-//     password,
-//   });
-//
-//   newUser.save()
-//     .then(() => res.json('User added!'))
-//     .catch(err => res.status(400).json('Error: ' + err));
-// });
-
 
 // Assigning Events to specific User
 router.post('/update/:id', function(req,res){
@@ -137,10 +133,10 @@ router.route('/create/:id').post((req,res) => {
     const description = req.body.description;
     const location = req.body.location;
     const date = Date.parse(req.body.date);
-    const host = user.username
+    // const host = user.username
 
     const newEvent = new Event({
-      host,
+      // host,
       name,
       description,
       location,
@@ -154,11 +150,12 @@ router.route('/create/:id').post((req,res) => {
 });
 
 
+
+
 // View specific User Profile
 router.route('/:id').get((req,res) => {
   Users.findById(req.params.id)
   .populate('attending').exec(function(err, users){
-    events = users.createdEvent
     res.json(users)
   })
 })

@@ -8,9 +8,12 @@ import Map from './components/Map/Map';
 import SearchBar from './components/Searchbar/Searchbar';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
-import About from './pages/About/About';
+import AllEvents from './pages/AllEvents/AllEvents';
 import LoggedIn from './pages/LoggedIn/LoggedIn';
 import CreateEvent from './pages/CreateEvent/CreateEvent';
+import EditEvent from './pages/EditEvent/EditEvent';
+import CreateUser from './pages/CreateUser/CreateUser';
+
 //Utilities
 import userService from './utils/userService';
 
@@ -66,10 +69,14 @@ class App extends React.Component {
        <div>
         <Header />
         <br />
-        <Route path="/" exact component={Map} />
+        <Route path="/" component={Map} />
+        <Route path="/register" component={CreateUser} />
+        <Route path="/login" component={Login} />
+        <Route path="/events" component={AllEvents} />
+        <Route path="/edit/:id" component={EditEvent} />
         <Route path="/create" component={CreateEvent} />
       </div>
-    </Router>
+      </Router>
     )
   }
 }

@@ -3,14 +3,16 @@ import axios from 'axios';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default class CreateEvent extends Component {
+export default class EditEvent extends Component {
   constructor(props) {
     super(props);
+
     this.onChangeName = this.onChangeName.bind(this);
     this.onChangeDescription = this.onChangeDescription.bind(this);
     this.onChangeLocation = this.onChangeLocation.bind(this);
     this.onChangeDate = this.onChangeDate.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+
     this.state = {
       name: '',
       description: '',
@@ -18,61 +20,71 @@ export default class CreateEvent extends Component {
       date: new Date(),
     }
   }
-  // componentDidMount() {
-  //   axios.get('http://localhost:5000/users/')
-  //     .then(response => {
-  //       if (response.data.length > 0) {
-  //         this.setState({
-  //           users: response.data.map(user => user.username),
-  //           username: response.data[0].username
-  //         })
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     })
-  //
-  // }
+
+  componentDidMount() {
+    axios.get('http://localhost:4000/events/'+this.props.match.params.id)
+      .then(response => {
+        this.setState({
+          name: response.data.name,
+          description: response.data.description,
+          location: response.data.location,
+          date: new Date(response.data.date)
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  }
+
   onChangeName(e) {
     this.setState({
       name: e.target.value
     })
   }
+
   onChangeDescription(e) {
     this.setState({
       description: e.target.value
     })
   }
+
   onChangeLocation(e) {
     this.setState({
       location: e.target.value
     })
   }
+
   onChangeDate(date) {
     this.setState({
       date: date
     })
   }
+
   onSubmit(e) {
     e.preventDefault();
-    const newEvent = {
+
+    const events = {
       name: this.state.name,
       description: this.state.description,
       location: this.state.location,
       date: this.state.date
     }
-    console.log(newEvent);
-    axios.post('http://localhost:4000/users/create/:id', newEvent)
+
+    console.log(events);
+
+    axios.post('http://localhost:4000/events/update/' + this.props.match.params.id, events)
       .then(res => console.log(res.data));
-    window.location = '/';
+
+    window.location = '/events';
   }
+
   render() {
     return (
     <div>
-      <h3>Create New Event</h3>
+      <h3>Edit Event</h3>
       <form onSubmit={this.onSubmit}>
         <div className="form-group">
-          <label>Name: </label>
+          <label>Username: </label>
           <input type="text"
               required
               className="form-control"
@@ -107,8 +119,9 @@ export default class CreateEvent extends Component {
             />
           </div>
         </div>
+
         <div className="form-group">
-          <input type="submit" value="Create Event" className="btn btn-primary" />
+          <input type="submit" value="Edit Event" className="btn btn-primary" />
         </div>
       </form>
     </div>
