@@ -35,7 +35,7 @@ Create an account in order to gain access to the create event functionality.
 
 Complete a multiple-field form in order to register account. Following a succesful registration, you will immediately be redirect to the appropriate view.
 
-![Imgur Image](https://i.imgur.com/H8PTERN.png)
+![Imgur Image](https://i.imgur.com/mvxECSb.png)
 
 ### Create Event View
 
