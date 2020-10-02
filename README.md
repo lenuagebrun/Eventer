@@ -29,7 +29,7 @@ npm start
 
 Create an account in order to gain access to the create event functionality.
 
-[Imgur](https://imgur.com/2Zy1Ee4)
+![Imgur Image](https://imgur.com/2Zy1Ee4)
 
 ### Account Registration Portal
 
@@ -41,7 +41,7 @@ Complete a multiple-field form in order to register account. Following a succesf
 
 Upon a succesful login from a 'doctor' account you will be greeted with the following view.
 
-![Imgur](https://imgur.com/xkG113K)
+![Imgur Image](https://imgur.com/xkG113K)
 
 ### Map View
 
