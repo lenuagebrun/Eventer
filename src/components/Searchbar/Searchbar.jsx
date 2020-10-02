@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '../../pages/Login/Login';
-import About from '../../pages/About/About';
+// import About from '../../pages/About/About';
 
 class SearchBar extends React.Component {
   state = {
@@ -16,9 +16,9 @@ class SearchBar extends React.Component {
       <div id='search-bar'>
         <form onSubmit={this.onFormSubmit} className="ui form">
           <div className="field">
-            <input 
+            <input
             placeholder='Enter address here...'
-            type="text" 
+            type="text"
             value={this.state.term}
             onChange={(e) => this.setState({term: e.target.value })} />
           </div>
