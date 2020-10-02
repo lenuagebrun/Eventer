@@ -13,7 +13,7 @@ https://gaemr.herokuapp.com/accounts/login/
 # Installation
 
 ```
-git clone https://github.com/rahulgupta15/generalassemblyemr
+git clone https://github.com/lenuagebrun/eventer
 cd eventer
 
 npm i
